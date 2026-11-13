@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- تم تغيير عنوان الصفحة هنا -->
+    <title>NF-GOTIAK by gotiak</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- تم تغيير العنوان الرئيسي هنا -->
+        <h1>NF-GOTIAK <span class="by-text">by gotiak</span></h1>
+        <p class="disclaimer">
+            made by @gotiak => instagram
+        </p>
+        <form id="cookieForm">
+            <label for="cookie_text">Paste your Netflix cookies (Netscape format or Name=Value pairs):</label>
+            <textarea id="cookie_text" name="cookie_text" rows="10" placeholder=".netflix.com TRUE / TRUE 0 NetflixId ct%3D...&#10;.netflix.com TRUE / TRUE 0 SecureNetflixId v%3D3%26..." required></textarea>
+            <button type="submit">Check & Generate Links</button>
+        </form>
+        <div id="result" class="result hidden"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
